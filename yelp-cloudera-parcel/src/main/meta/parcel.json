@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "name": "CALLCENTER",
+  "version": "0.9.1-SNAPSHOT",
+  
+  "setActiveSymlink": true,
+
+  "depends": "CDH (>= 5.10), CDH (<< 6.0)",
+  "replaces": "",
+  "conflicts": "",
+
+  "provides": [
+    "callcenter-ingest",
+    "callcenter-simulator",
+    "callcenter-analytics"
+  ],
+
+  "scripts": {
+    "defines": "callcenter_env.sh"
+  },
+  "packages": [
+    { "name"   : "callcenter-ingest",
+      "version": "0.9.0"
+    },
+    { "name"   : "callcenter-simulator",
+      "version": "0.9.0"
+    },
+    { "name"   : "callcenter-analytics",
+      "version": "0.9.0"
+    }
+  ],
+  "components": [
+    { "name"       : "callcenter-ingest",
+      "version"    : "0.9.0-cdh5.10.0-SNAPSHOT"
+    },
+    { "name"       : "callcenter-simulator",
+      "version"    : "0.9.0-cdh5.10.0-SNAPSHOT"
+    }
+  ],
+
+  "users": {
+    "ccuser": {
+      "longname"    : "callcenter user",
+      "home"        : "/var/lib/ccuser",
+      "shell"       : "/bin/bash",
+      "extra_groups": [ "ccgroup" ]
+    }
+  },
+
+  "groups": [
+    "ccgroup"
+  ]
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<!--Shared. Does common copying -->
+<component>
+	<fileSets>
+		<!-- Include the top level conf directory -->
+		<fileSet>
+			<directory>${project.basedir}/../conf</directory>
+			<outputDirectory>conf</outputDirectory>
+			<fileMode>0644</fileMode>
+			<directoryMode>0755</directoryMode>
+		</fileSet>
+		<!-- Include top level bin directory -->
+		<fileSet>
+			<directory>${project.basedir}/../bin</directory>
+			<outputDirectory>bin</outputDirectory>
+			<fileMode>0755</fileMode>
+			<directoryMode>0755</directoryMode>
+		</fileSet>
+	</fileSets>
+</component>
